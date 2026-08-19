@@ -108,7 +108,7 @@ Các trường hợp kiểm thử tập trung vào:
 
 Video demo quá trình sử dụng chức năng nhập phiếu nhập kho:
 
-> **Video Demo:** *[Thêm link video tại đây]*
+> **Video Demo:** *https://drive.google.com/file/d/1bdB88dGMdYcsEkj6YItNDLShgDDmpJ6P/view?usp=sharing*
 
 ---
 
