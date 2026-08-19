@@ -7,6 +7,10 @@ export class WarehouseDocumentService {
         return this.warehouseDocumentRepository.getAllWarehouseDocuments();
     }
 
+    async getWarehouseDocumentById(id: number) {
+        return this.warehouseDocumentRepository.getWarehouseDocumentById(id);
+    }
+
     async createWarehouseDocument(input: CreateWarehouseDocumentInput) {
         return this.warehouseDocumentRepository.createWarehouseDocument(input);
     }

@@ -11,7 +11,19 @@ export class WarehouseDocumentController {
             next(error);
         }
     };
-    getWarehouseDocumentById = async (req: Request, res: Response, next: NextFunction) => {}
+    getWarehouseDocumentById = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const id = Number(req.params.id);
+            const doc = await this.warehouseDocumentService.getWarehouseDocumentById(id);
+            if (!doc) {
+                res.status(404).json({ message: 'Warehouse document not found' });
+                return;
+            }
+            res.status(200).json(doc);
+        } catch (error) {
+            next(error);
+        }
+    };
     createWarehouseDocument = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const doc = await this.warehouseDocumentService.createWarehouseDocument(req.body);

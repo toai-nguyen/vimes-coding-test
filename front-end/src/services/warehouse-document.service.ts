@@ -1,6 +1,10 @@
 import apiClient from "../api/client";
 import type { WarehouseDocument } from "../../../shared/types/warehouse-document";
 import type { WarehouseAsset } from "../../../shared/types/warehouse-assset";
+import type { WarehouseDocumentLog } from "../../../shared/types/warehouse-document-log";
+import type { WarehouseDocumentApprove } from "../../../shared/types/warehouse-document-approve";
+// import type { Log } from "../../../shared/types/log";
+// import type { Approve } from "../../../shared/types/approve";
 
 export interface CreateWarehouseDocumentPayload {
     departmentName: string;
@@ -17,6 +21,8 @@ export interface CreateWarehouseDocumentPayload {
 
 export interface WarehouseDocumentDetail extends WarehouseDocument {
     assets: WarehouseAsset[];
+    logs: WarehouseDocumentLog[];
+    approves: WarehouseDocumentApprove[];
 }
 
 const BASE = "/warehouse-documents";
