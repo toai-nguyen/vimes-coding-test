@@ -5,6 +5,7 @@ import {
 
 interface CustomTextFieldProps {
     label: string;
+    name?: string;
     value: string;
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     error?: boolean;
@@ -16,6 +17,7 @@ interface CustomTextFieldProps {
 
 function CustomTextField({
     label,
+    name,
     value,
     onChange,
     error = false,
@@ -31,6 +33,7 @@ function CustomTextField({
             >{label}</label>
             <TextField
                 fullWidth
+                name={name}
                 value={value}
                 onChange={onChange}
                 error={error}

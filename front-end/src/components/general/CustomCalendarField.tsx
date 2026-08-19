@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import type { Dayjs } from 'dayjs'
 
@@ -19,20 +20,26 @@ function CustomCalendarField({
   required = false,
 }: CustomCalendarFieldProps) {
   return (
-    <DatePicker
-      label={label}
-      value={value}
-      onChange={onChange}
-      format="DD/MM/YYYY"
-      slotProps={{
-        textField: {
-          fullWidth: true,
-          required,
-          error,
-          helperText,
-        },
-      }}
-    />
+    <Box>
+      <label
+        style={{ fontWeight: 600, marginBottom: '0.25rem', display: 'block' }}
+      >{label}</label>
+      <DatePicker
+        // label={label}
+        value={value}
+        onChange={onChange}
+        format="DD/MM/YYYY"
+        slotProps={{
+          textField: {
+            fullWidth: true,
+            required,
+            error,
+            helperText,
+          },
+        }}
+      />
+    </Box>
+
   )
 }
 

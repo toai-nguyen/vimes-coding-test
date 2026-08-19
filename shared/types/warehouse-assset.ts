@@ -5,7 +5,7 @@ export interface WarehouseAsset {
     assetCode: string;
     assetUnitName: string;
     evidentQuantity: number;
-    relizedQuantity: number;
+    realizedQuantity: number;
     unitPrice: number;
     totalAmount: number;
     createdAt: string;
